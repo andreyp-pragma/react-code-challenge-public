@@ -1,17 +1,53 @@
-## Stock Prices Ticker Challenge
-The challenge is to create a table similar to Yahoo Finance (Yahoo Finance) with quote lookup streaming live symbol (name, lastPrice, change, changePct).
+# 📈 Stock Prices Ticker Challenge
 
-### Task List
-1. Create a basic table displaying the data with updates based on a hardcoded list of symbols.
-2. Style the table to have a similar look and feel to the provided mockup (quote-lookup.png).
-3. Add green/red color coding based on the "change" field: green if greater than or equal to 0, red if less than 0.
-4. Implement an input field at the top to subscribe to different symbols.
-5. Add a delete button in each row of the table to unsubscribe from a symbol.
+Welcome! This challenge involves building a real-time stock ticker table, similar in style and functionality to Yahoo
+Finance. Your goal is to display and update live stock quotes with dynamic styling and user interactions.
 
-### Available Scripts
-In the project directory to run the project:
-```
+## 🧩 The Challenge
+
+Build a stock price ticker that:
+
+- Displays a table of stock quotes displaying: Symbol, Last Price, Change, % Change and Name)
+- Streams live updates from a hardcoded list of symbols
+- Supports adding/removing symbols dynamically
+- Matches the look and feel of the provided design mockup (`quote-lookup.png`)
+
+## ✅ Task List
+
+Your implementation should include the following features:
+
+1. **Display Stock Table**
+    - Show a table with data for each symbol: `symbol`, `lastPrice`, `change`, and `changePct`
+    - Notice the `name` on the second line. It overlaps over more than once column
+    - Use the hardcoded list of stock symbols `initialSymbols` to begin with
+
+2. **Real-Time Updates**
+    - Update stock data in real time (using `StreamingClient`)
+    - The primary key is the `symbol` field
+    - 💡 _You can find the streamed data output in the browser console_
+    - ⚠️ _The emitted updates are provided as deltas — fields that haven't changed are omitted_
+
+3. **Styling**
+    - Match the visual design shown in `quote-lookup.png`
+    - Apply color coding:
+        - 🔴 Red for negative `change` values
+        - 🟢 Green for `change` values ≥ 0
+
+4. **Symbol Subscription**
+    - Add an input field to allow users to subscribe to additional stock symbols
+
+5. **Unsubscribe Feature**
+    - Add a delete button in each row to remove/unsubscribe from a symbol
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+npm install
 npm start
 ```
 
-Note: Please refer to the provided mockup for visual design guidance.
+## 🖼 Design Reference
+
+Please refer to the `quote-lookup.png` mockup included in the project directory for visual and UI guidance.
